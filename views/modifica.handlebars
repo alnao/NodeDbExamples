@@ -1,0 +1,21 @@
+<h1>Modifica nota</h1>
+<div class="card card-body mt-5">
+    <form action="/modifica_salva/{{nota._doc._id}}" method="post">
+        <input type="hidden" name="_method" value="POST" />
+        <div class="form-group">
+            <label for="titolo">Titolo</label>
+            <input type="text" class="form-control" name="titolo" value="{{nota._doc.titolo}}" >
+        </div>
+        <div class="form-group">
+            <label for="contenuto">Contenuto</label>
+            <textarea class="form-control" name="contenuto" >{{nota._doc.contenuto}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-success" name="aggiungi">Salva nuovo</button>
+    </form>
+    {{#each errori}}
+        <div class="alert alert-danger">
+            {{text}}
+        </div>
+    {{else}}<!--non ci sono messaggi-->
+    {{/each}}
+</div>

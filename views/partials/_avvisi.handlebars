@@ -1,0 +1,18 @@
+{{#if msg_successo}}
+<div class="alert alert-success m-3">{{msg_successo}}</div>
+{{/if}}
+
+{{#if msg_errore}}
+<div class="alert alert-danger m-3">{{msg_errore}}</div>
+{{/if}}
+
+{{#each errori}}
+    <div class="alert alert-danger m-3">
+        {{text}}
+    </div>
+{{else}}<!--non ci sono messaggi-->
+{{/each}}
+
+{{#if error}}
+    <div class="alert alert-danger m-3">{{error}}</div>
+{{/if}}

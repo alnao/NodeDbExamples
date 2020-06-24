@@ -1,0 +1,15 @@
+<h1>Lista note</h1>
+
+{{#each listaNoteInPagina}}
+    <div class="card  mb-3">
+        <div class="card-header">{{this._doc.titolo}}</div>
+        <div class="card-body">{{this._doc.contenuto}}</div>
+        <a  class="btn btn-primary m-3" href="/modifica/{{this._doc._id}}">Modifica</a>
+        <form action="/cancella_nota/{{this._doc._id}}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            <input type="submit" class="btn btn-danger m-3 btn-block" value="Cancella"/>
+        </form>
+    </div>
+{{else}}
+    <div class="alert alert-danger">Non ci sono note</div>
+{{/each}}

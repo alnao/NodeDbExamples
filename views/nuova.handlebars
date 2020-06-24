@@ -1,0 +1,14 @@
+<h1>Nuova nota</h1>
+
+<form action="aggiungi_nota" method="post">
+    <div class="form-group">
+        <label for="titolo">Titolo</label>
+        <input type="text" class="form-control" name="titolo" value="{{titolo}}" >
+    </div>
+    <div class="form-group">
+        <label for="contenuto">Contenuto</label>
+        <textarea class="form-control" name="contenuto" >{{contenuto}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-success" name="aggiungi">Salva nuovo</button>
+</form>
+
