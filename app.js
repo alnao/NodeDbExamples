@@ -22,7 +22,7 @@ moongoose.Promise= global.Promise;
 
 let db_url = 'mongodb://alnao:bello@localhost:27017/collectiondemo';
 if (process.env.NODE_ENV === 'production'){
-  db_url = 'monbodb://<user>:<password>@indirizzo.strano:porta/note-prod';
+  db_url = 'mongodb://PNrbctwK6pCJF3TD:PNrbctwK6pCJF3TD@cluster0-shard-00-00-tkrby.mongodb.net:27017,cluster0-shard-00-01-tkrby.mongodb.net:27017,cluster0-shard-00-02-tkrby.mongodb.net:27017/note-prod?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
 }
 moongoose.connect(db_url,{useMongoClient: true}
 ).then( () => {console.log("DB connesso");}
